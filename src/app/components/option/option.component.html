@@ -1,0 +1,301 @@
+<link href="/assets/fontawesome.css" rel="stylesheet" />
+
+<p></p>
+<div class="card shadow p-3 mb-5 bg-dark rounded col-12" style="margin: 1px">
+  <div class="col-5" style="margin: 20px">
+    <form [formGroup]="productAddForm">
+      <div class="form-group">
+        <p ></p>
+        <label style="color: floralwhite;">{{label1}}</label>
+        <select
+          type="object"
+          [(ngModel)]="selectedLvl"
+          (change)="callLvlOne()"
+          class="form-select"
+          aria-label="Default select example"
+          id="optionOne"
+          formControlName="opt1"
+        >
+          <option *ngFor="let option of options" [ngValue]="option">
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <p></p>
+        <label style="color: floralwhite;">{{label2}}</label>
+        <select
+          class="form-select col-6"
+          type="option"
+          [(ngModel)]="selectedLvlOne"
+          (change)="callLvlTwo()"
+          id="optionTwo"
+          formControlName="opt2"
+        >
+          <option *ngFor="let option of lvlOneOptions" [ngValue]="option">
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <p></p>
+        <select
+          [(ngModel)]="selectedLvlTwo"
+          (change)="callLvlThree()"
+          class="form-select"
+          type="option"
+          id="optionThree"
+          formControlName="opt3"
+        >
+          <option *ngFor="let option of lvlTwoOptions" [ngValue]="option">
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group" *ngIf="lvlThreeOptions?.length > 0">
+        <p></p>
+        <select
+          [(ngModel)]="selectedLvlThree"
+          class="form-select"
+          type="option"
+          id="optionFour"
+          formControlName="opt4"
+        >
+          <option *ngFor="let option of lvlThreeOptions" [ngValue]="option">
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+
+      <div
+        class="form-group"
+        style="background-color: teal"
+        *ngIf="lvlFourOptions?.length > 0"
+      >
+        <p></p>
+        <select
+          [(ngModel)]="selectedLvlFour"
+          class="form-select"
+          aria-label="Default select example"
+          type="option"
+          id="optionFive"
+          formControlName="opt5"
+        >
+          <option *ngFor="let option of lvlFourOptions" [ngValue]="option">
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group" *ngIf="lvlFiveOptions.length > 0">
+        <p></p>
+        <select
+          [(ngModel)]="selectedLvlFive"
+          class="form-select"
+          aria-label="Default select example"
+          type="option"
+          id="optionSix"
+          formControlName="opt6"
+        >
+          <option *ngFor="let option of lvlFiveOptions" [ngValue]="option">
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group" *ngIf="lvlSixOptions.length > 0">
+        <p></p>
+        <select
+          [(ngModel)]="selectedLvlSix"
+          class="form-select"
+          aria-label="Default select example"
+          type="option"
+          id="optionSeven"
+          formControlName="opt7"
+        >
+          <option *ngFor="let option of lvlSixOptions" [ngValue]="option">
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group" *ngIf="lvlSevenOptions.length > 0">
+        <p></p>
+        <select
+          [(ngModel)]="selectedLvlSeven"
+          class="form-select"
+          aria-label="Default select example"
+          type="option"
+          id="optionEight"
+          formControlName="opt8"
+        >
+          <option *ngFor="let option of lvlSevenOptions" [ngValue]="option">
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group" *ngIf="lvlEightOptions.length > 0">
+        <p></p>
+        <select
+          [(ngModel)]="selectedLvlEight"
+          class="form-select"
+          aria-label="Default select example"
+          type="option"
+          id="optionNine"
+          formControlName="opt9"
+        >
+          <option *ngFor="let option of lvlEightOptions" [ngValue]="option">
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group" *ngIf="lvlNineOptions.length > 0">
+        <p></p>
+        <select
+          [(ngModel)]="selectedLvlNine"
+          class="form-select"
+          aria-label="Default select example"
+          type="option"
+          id="optionTen"
+          formControlName="opt10"
+        >
+          <option *ngFor="let option of lvlNineOptions" [ngValue]="option">
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group" *ngIf="lvlTenOptions.length > 0">
+        <p></p>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          [(ngModel)]="selectedLvlTen"
+          type="option"
+          id="optionEleven"
+          formControlName="opt11"
+        >
+          <option *ngFor="let option of lvlTenOptions" [ngValue]="option">
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group" *ngIf="lvlElevenOptions.length > 0">
+        <p></p>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          [(ngModel)]="selectedLvlEleven"
+          type="option"
+          id="optionTwelve"
+          formControlName="opt12"
+        >
+          <option *ngFor="let option of lvlElevenOptions" [ngValue]="option">
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group" *ngIf="lvlTwelveOptions.length > 0">
+        <p></p>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          [(ngModel)]="selectedLvlTwelve"
+          type="option"
+          id="optionThirdteen"
+          formControlName="opt13"
+        >
+          <option *ngFor="let option of lvlTwelveOptions" [ngValue]="option">
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group" *ngIf="lvlThirdteenOptions.length > 0">
+        <p></p>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          [(ngModel)]="selectedLvlThirdteen"
+          type="option"
+          id="optionFourteen"
+          formControlName="opt14"
+        >
+          <option
+            *ngFor="let option of lvlThirdteenOptions"
+            [ngValue]="option"
+          >
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group" *ngIf="lvlFourteenOptions.length > 0">
+        <p></p>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          [(ngModel)]="selectedLvlFourteen"
+          type="option"
+          id="optionFifthteen"
+          formControlName="opt15"
+        >
+          <option *ngFor="let option of lvlFourteenOptions" [ngValue]="option">
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group" *ngIf="lvlFifthteenOptions.length > 0">
+        <p></p>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          [(ngModel)]="selectedLvlFifthteen"
+          type="option"
+          id="optionSixthteen"
+          formControlName="opt16"
+        >
+          <option
+            *ngFor="let option of lvlFifthteenOptions"
+            [ngValue]="option"
+          >
+            {{ option.name }}
+          </option>
+        </select>
+      </div>
+      <!-- <div class="form-group" *ngIf="lvlSixthteenOptions.length > 0">
+        <p></p>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          [(ngModel)]="selectedLvlSixthteen"
+          type="option"
+          id="optionSeventeen"
+          formControlName="opt17"
+        >
+          <option
+            *ngFor="let option of lvlSixthteenOptions"
+            [ngValue]="option"
+          >
+            {{ option.name }}
+          </option>
+        </select>
+      </div> -->
+    </form>
+  </div> -->
+
+  <button
+    type="button"
+    class="shadow btn btn-success rounded-circle"
+    style="
+      position: fixed;
+      bottom: 80px;
+      right: 80px;
+      height: 65px;
+      width: 65px;
+    "
+    (click)="addToCard()"
+  >
+    <i class="bi bi-bag-check-fill" style="font-size: 200%; align-items: center" ></i>
+</button>
+</div>
