@@ -1,4 +1,9 @@
 # AlpmrpFrontend
+<br>![Video_21-07-05_13-23-43](https://user-images.githubusercontent.com/75183752/124465809-8328ea00-dd9e-11eb-9a23-3d5b9b2b50c5.gif)
+
+
+
+<br>![Video_21-07-05_13-23-43 (1)](https://user-images.githubusercontent.com/75183752/124465871-9c319b00-dd9e-11eb-9139-232fb5f701e8.gif)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
 
